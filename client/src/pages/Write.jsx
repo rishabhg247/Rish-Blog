@@ -24,7 +24,7 @@ const Write = () => {
     if(value===""||title===""||file===""||cat===""){return alert("Please fill all details properly...")}
     e.preventDefault();
     try {
-      await axios.post(`/posts/`,mainObj);
+      await axios.post(`http://localhost:8800/api/posts/`,mainObj);
       navigate('/');setTimeout(()=>{alert("Post has been Created")},[1500])
     } catch (err) {
       console.log(err);

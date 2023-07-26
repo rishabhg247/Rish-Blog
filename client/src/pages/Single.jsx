@@ -13,8 +13,8 @@ const Single = () => {
   const postId = location.pathname.split("/")[2];
   const { currentUser } = useContext(AuthContext);
   const fetchData = async () => {
-    try {let res = await axios.get(`/posts/${postId}`);setPost(res.data);
-    let res2 = await axios.get(`/posts/username/${postId}`);setPostUser(res2.data[0].username)
+    try {let res = await axios.get(`http://localhost:8800/api/posts/${postId}`);setPost(res.data);
+    let res2 = await axios.get(`http://localhost:8800/api/posts/username/${postId}`);setPostUser(res2.data[0].username)
   }
     catch(err){console.log(err)}
   };

@@ -21,7 +21,7 @@ const Register = () => {
     e.preventDefault();
     if(inputs.username===""||inputs.email===""||inputs.password===""){return alert("Please fill all details properly")}
     try {
-      let response=await axios.post("/auth/register", inputs);
+      let response=await axios.post("http://localhost:8800/api/auth/register", inputs);
       navigate("/login");setTimeout(() => {
         alert(response.data.message);
       }, 1500);
