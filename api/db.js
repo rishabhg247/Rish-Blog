@@ -1,7 +1,7 @@
 import mysql from "mysql2";
 
 export const db = mysql.createConnection({
-  host:"localhost",
+  host:"43.204.218.210",
   user:"root",
   password:"password24@#",
   database:"rishblog"
